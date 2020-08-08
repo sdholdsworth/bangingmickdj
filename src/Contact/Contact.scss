@@ -1,5 +1,94 @@
 @import '../styles/settings.scss';
 
-p {
-    color: green;
+section {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: no-wrap;
+    justify-content: space-between;
+    align-items: stretch;
+    align-content: center;
+
+    div {
+        width: 50%;
+        padding: 3rem;
+        position: absolute;
+        height: inherit;
+    }
 }
+
+.left {
+   left: 0;
+}
+
+.right {
+    left: 50%;
+}
+
+p, label {
+    color: #FFFFFF;
+}
+
+p {
+    width: 50%;
+    margin-bottom: 3rem;
+}
+
+label {
+    display: block;
+    margin: 30px 0 10px;
+}
+
+input {
+    font-size: 0.8rem;
+    padding: 5px 10px;
+    width: 50%;
+    cursor: pointer;
+}
+
+textarea {
+    font-size: 0.8rem;
+    padding: 5px 10px;
+    width: 50%;
+    height: 300px !important;
+    resize: none;
+    cursor: pointer;
+}
+
+button {
+    display: block;
+    margin-top: 30px;
+    border: 1px solid inset grey;
+    border-radius: 10px;
+    padding: 5px 10px;
+    cursor: pointer;
+
+    img, span {
+        display: inline;
+        position: relative;
+        cursor: pointer;
+    }
+
+    img {
+        top: 2.5px;
+    }
+
+    span {
+        top: -5px;
+        padding-left: 5px;
+        font-size: 0.95rem;
+    }
+
+    }
+
+    form {
+
+        p {
+            margin: 4rem 0 1rem;
+        }
+
+        a {
+            font-size: 1.8rem;
+            font-weight: 900 !important;
+            cursor: pointer;
+        }
+    }
