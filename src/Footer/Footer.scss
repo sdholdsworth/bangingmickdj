@@ -1,0 +1,60 @@
+@import '../styles/settings.scss';
+
+
+.footer {
+    position: relative;
+    width: 100vw;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 50px;
+    // background: rgba(27, 32, 37, 1);
+    // background-image: linear-gradient(to right, #b1ada8 0%, #304352 100%);
+    background-image: linear-gradient(to right, #cecac5 0%,  #9c9996 25%, #405a6d 75%, #304352 100%);
+    overflow: hidden;
+
+    span {
+        display: inline-block;
+        font-family: $headings;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 0.8rem;
+        // color: rgb(245, 245, 245);
+        // color: rgba(27, 32, 37, 1) !important;
+        color: $white !important;
+    }
+
+    strong {
+        font-style: oblique;
+        font-weight: 900 !important;
+        letter-spacing: 1px;
+    }
+
+    #social {
+        position: absolute;
+        left: 88%;
+        top: 50%;
+        transform: translateY(-50%);
+
+        #copy {
+            // color: black !important;
+            color: $white !important;
+        }
+
+        i {
+            // color: whitesmoke;
+            // color: rgba(27, 32, 37, 1) !important;
+            color: $white;
+            font-size: 2.5rem;
+            margin-right: 20px;
+            transition: all 0.25s ease-in-out;
+
+            &:hover {
+                color: red !important;
+                cursor: pointer;
+                transition: all 0.25s ease-in-out;
+            }
+        }
+    }
+}

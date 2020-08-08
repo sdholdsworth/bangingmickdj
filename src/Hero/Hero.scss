@@ -1,0 +1,114 @@
+@import '../styles/settings.scss';
+
+.hero-container {
+	position: relative;
+	// position: sticky;
+	 //top: 20px;
+	width: 101vw;
+	left: 50%;
+	transform: translateX(-50%);
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	height: 98vh;
+	top: 61px; //start from small size header position
+}
+
+.hero-overlay {
+	background: rgba(34, 34, 34, 0.5);
+	position: absolute;
+	width: 101vw;
+	left: 50%;
+	transform: translateX(-50%);
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	z-index: 9999;
+	height: 98vh;
+}
+
+.hero-overlay {
+	h1 {
+		font-family: $headings;
+		font-size: 5.5rem;
+		position: absolute;
+		display: inline;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		text-align: center;
+	}
+}
+
+ figure {
+	position: relative;
+	width: 1000%;
+	margin: 0;
+	left: 0;
+	animation: slider 100s ease-in-out infinite 2.5s; //slider looks to be good with this setup but needs to be faster on desktop and as come down, go upto 100s
+	                                                 // or until it looks good and smooth on a mobile!!
+	//animation-timing-function: cubic-bezier(.99,.88,.88,.99);
+}
+
+figure img {
+	width: 10%;
+	height: 98vh;
+	float: left;
+}
+
+@keyframes slider {
+	0% { left: 0; }
+
+	5% { left: -100%; }
+
+	10% { left: -100%; }
+
+	15% { left: -200%; }
+
+	20% { left: -200%; }
+
+	25% { left: -300%; }
+
+	30% { left: -300%; }
+
+	35% { left: -400%; }
+
+	40% { left: -400%; }
+
+	45% { left: -500%; }
+
+	50% { left: -500%; }
+
+	55% { left: -600%; }
+
+	60% { left: -600%; }
+
+	65% { left: -700%; }
+
+	70% { left: -700%; }
+
+	75% { left: -800%; }
+
+	80% { left: -800%; }
+
+	85% { left: -900%; }
+
+	90% { left: -900%; }
+
+	95% { left: -900%; }
+
+	100% { left: -900%; }
+}
+
+.red {
+	color: red;
+	display: inline;
+	font-weight: 500 !important;
+	font-style: oblique;
+}
+
+.white {
+	color: white;
+	display: inline;
+	font-weight: 900;
+}

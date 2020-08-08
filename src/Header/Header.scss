@@ -1,0 +1,155 @@
+@import '../styles/settings.scss';
+
+.header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: no-wrap;
+    justify-content: space-between;
+    align-items: stretch;
+    align-content: center;
+    position: fixed;
+    width: 101vw;
+    height: 110px;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9999;
+    background-image: linear-gradient(to right, #cecac5 0%,  #9c9996 25%, #405a6d 75%, #304352 100%);
+    transition: all 0.3s ease-out;
+    overflow: hidden;
+
+    #logo {
+        order: 1;
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+
+        img {
+            width: 180px;
+            transition: all 0.3s ease-out;
+        }
+    }
+
+    #navbar {
+        order: 2;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+
+        a {
+            text-decoration: none;
+            color: $white;
+            transition: all 0.3s ease-out;
+        }
+    }
+
+    #telephone {
+        order: 3;
+        position: absolute;
+        left: 87.5%;
+        top: 50%;
+        transform: translateY(-50%);
+
+        span {
+            transition: all 0.3s ease-out;
+        }
+
+        a {
+            text-decoration: none;
+            color: $white !important;
+            transition: all 0.3s ease-out;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    li {
+        list-style: none;
+        display: inline;
+        margin: 5px 15px;
+        font-family: $headings;
+        font-weight: 700;
+        font-size: 1.2rem;
+        cursor: pointer;
+
+        &:hover {
+            font-style: oblique;
+        }
+    }
+
+    span, a {
+        font-family: $headings;
+        font-weight: 700;
+    }
+
+    a {
+        color: $black;
+        cursor: pointer;
+    }   
+}
+
+.small-header {
+    height: 62px;
+    transition: all 0.3s ease-out;
+
+	#logo {
+	  img {
+        width: 100px !important;
+        transition: all 0.3s ease-out;
+	  }
+    }
+    
+    #navbar {
+        a {
+            font-size: 1rem;
+            transition: all 0.3s ease-out;
+        }
+    }
+
+    #telephone {
+        
+        span {
+            font-size: 0.95rem;  
+            transition: all 0.3s ease-out;
+        }
+        
+        a {
+            font-size: 0.95rem;
+            transition: all 0.3s ease-out;
+        }
+    }
+}
+
+.current {
+    color: $theme !important;
+    font-style: oblique;
+    // text-decoration: underline !important;
+    border-bottom: 1px solid $theme;
+}
+
+
+@media screen and (max-width: 1199px) {
+  .header {
+      #logo {
+          img {
+            width: 150px;
+          }
+      }
+
+      #navbar {
+          li {
+              font-size: 1rem;
+              padding: 5px 10px;
+          }
+      }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+
+      //this is where to kick in the responsive burger menu and mobile changes etc... (decide if using flexbox etc... for other components too) - NOT required to 
+}

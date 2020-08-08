@@ -1,0 +1,87 @@
+@import './settings.scss';
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    cursor: default;
+}
+
+html, body {
+    //background: linear-gradient(-270deg, rgb(189, 2, 189), rgb(55, 55, 207), rgb(27, 216, 27));
+    font-family: $headings; 
+    overflow-x: hidden;
+    //chrome fix for scroll adding to overall body width
+    overflow-y: overlay;
+
+    //prevent user selection
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+ }
+
+ html {
+     //smooth scroll 
+     -webkit-scroll-behavior: smooth;
+     -khtml-scroll-behavior: smooth;
+     -moz-scroll-behavior: smooth;
+     -ms-scroll-behavior: smooth;
+     -o-scroll-behavior: smooth;
+     scroll-behavior: smooth;
+ }
+
+//  .App {
+//      position: relative;
+//      left: 50%;
+//      transform: translateX(-50%);
+//      width: 1500px;
+//  }
+
+ .red {
+    color: $theme;
+}
+
+section {
+    height: 100vh;
+    position: relative;
+    width: 101vw;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 1.5rem 3rem;
+
+    h2  {
+        font-family: $headings;
+        font-size: 1.5rem;
+    }
+}
+
+.section-dark {
+    background: rgba(27, 32, 37, 1);
+    
+    //clip-path: polygon(100% 0%, 100% 100%, 0% 100%, 0% 12.5%);
+    //clip-path: polygon(100% 0%, 100% 73%, 0% 100%, 0% 31%);
+    //clip-path: polygon(100% 0%, 100% 85%, 0% 100%, 0% 15%);
+    //padding: 10% 20px 0;
+    //padding: 22% 20px 0;
+
+    h2  {
+        color: #FFFFFF;
+    }
+}
+
+.section-light {
+    background: rgba(245, 245, 245, 1);
+    
+    //clip-path: polygon(0% 0%, 0% 100%, 100% 87.5%, 100% 0%);
+    //padding: 20px 20px 12%;
+    // clip-path: polygon(100% 0%, 100% 85%, 0% 100%, 0% 15%);
+    // padding: 12% 20px 0;
+    
+    h2  {
+        color: #222222 !important;
+    }
+}
+
