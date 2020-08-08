@@ -22,8 +22,3 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# my additions
-#firebase.json
-#.firebaserc
-#package-lock.json
-
