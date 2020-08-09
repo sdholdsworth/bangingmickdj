@@ -7,14 +7,12 @@ const Contact = () => {
     return (
         <div>
             <section id="contact" className="section-dark">
-                <div className="left">
+                <div>
                     <p>If you're looking for a DJ for your event, look no further, DJ Banging Mick will offer you a professional, reputable and affordable service tailored to your needs to best suit your purpose.</p>
                     <p>Please feel free to make a none obligatory enquiry by filling out this form and sending me your message and I will get back to you as soon as possible.</p>
                     <p>I hope you have enjoyed viewing what I have to offer and hope to hear from you soon.</p>
-                    <p>All the very best!</p>
-                    <img src={ DJContact } alt="dj contact"></img>
                 </div>
-                <div className="right">
+                <div>
                     <form action="" method="get">
                         <label>Your Name</label>
                         <input type="text" name="name" id="name" required placeholder="what's your name?" />
@@ -27,6 +25,7 @@ const Contact = () => {
                         <a className="red" href="tel:+34609765797">+34 609 76 57 97</a>
                     </form>
                 </div>
+                <img id="dj-contact" src={ DJContact } alt="dj contact"></img>
             </section>
         </div>
     )

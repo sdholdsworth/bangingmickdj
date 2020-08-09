@@ -2,26 +2,20 @@
 
 section {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: no-wrap;
     justify-content: space-between;
     align-items: stretch;
     align-content: center;
+    position: relative;
 
     div {
+        position: relative;
         width: 50%;
         padding: 3rem;
-        position: absolute;
         height: inherit;
+        display: inline-block;
     }
-}
-
-.left {
-   left: 0;
-}
-
-.right {
-    left: 50%;
 }
 
 p, label {
@@ -30,7 +24,7 @@ p, label {
 
 p {
     width: 50%;
-    margin-bottom: 3rem;
+    margin-top: 3rem;
 }
 
 label {
@@ -49,7 +43,7 @@ textarea {
     font-size: 0.8rem;
     padding: 5px 10px;
     width: 50%;
-    height: 300px !important;
+    height: 300px;
     resize: none;
     cursor: pointer;
 }
@@ -90,5 +84,30 @@ button {
             font-size: 1.8rem;
             font-weight: 900 !important;
             cursor: pointer;
+        }
+    }
+
+    #dj-contact {
+        position: absolute;
+        height: 100px;
+        bottom: 0;
+        left: 3rem;
+    }
+
+    @media screen and (max-width: 1024px) {
+
+        section {
+            flex-direction: column;
+
+            div {
+                width: 100%;
+                 left: 50%;
+                 transform: translateX(-25%);
+                 padding: 3rem 0;
+            }
+        }
+
+        #dj-contact {
+            left: 20px;
         }
     }

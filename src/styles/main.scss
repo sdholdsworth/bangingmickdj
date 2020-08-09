@@ -45,12 +45,11 @@ html, body {
 }
 
 section {
-    height: 100vh;
+    min-height: 100vh;
     position: relative;
     width: 101vw;
     left: 50%;
     transform: translateX(-50%);
-    // padding: 1.5rem 3rem;
 
     h2  {
         font-family: $headings;
