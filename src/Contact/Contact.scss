@@ -9,10 +9,10 @@ section {
     align-content: center;
     position: relative;
 
-    div {
+    #contact-msg, #contact-form {
         position: relative;
         width: 50%;
-        padding: 3rem;
+        padding: 1rem 2rem;
         height: inherit;
         display: inline-block;
     }
@@ -23,16 +23,19 @@ p, label {
 }
 
 p {
+    position: relative;
     width: 50%;
     margin-top: 3rem;
 }
 
 label {
+    position: relative;
     display: block;
     margin: 30px 0 10px;
 }
 
-input {
+input, textarea {
+    position: relative;
     font-size: 0.8rem;
     padding: 5px 10px;
     width: 50%;
@@ -40,15 +43,12 @@ input {
 }
 
 textarea {
-    font-size: 0.8rem;
-    padding: 5px 10px;
-    width: 50%;
     height: 300px;
     resize: none;
-    cursor: pointer;
 }
 
 button {
+    position: relative;
     display: block;
     margin-top: 30px;
     border: 1px solid inset grey;
@@ -75,12 +75,14 @@ button {
     }
 
     form {
+        position: relative;
 
         p {
             margin: 4rem 0 1rem;
         }
 
         a {
+            // position: relative;
             font-size: 1.8rem;
             font-weight: 900 !important;
             cursor: pointer;
@@ -88,10 +90,21 @@ button {
     }
 
     #dj-contact {
-        position: absolute;
-        height: 100px;
-        bottom: 0;
-        left: 3rem;
+        position: relative;
+        width: 10%;
+        height: inherit;
+        bottom: 0 !important;
+        right: 91%;
+        // left: -90%;
+        // padding: 0 0 0 3rem;
+        
+        
+        img {
+            position: relative;
+            top: 80%;
+            // padding: 1rem;
+            margin: 3rem;
+        }
     }
 
     @media screen and (max-width: 1024px) {
@@ -99,15 +112,50 @@ button {
         section {
             flex-direction: column;
 
-            div {
+            #contact-msg, #contact-form {
                 width: 100%;
-                 left: 50%;
-                 transform: translateX(-25%);
-                 padding: 3rem 0;
+                left: 0;
+                padding: 1rem;     
             }
         }
 
+        p, input, textarea {
+            width: 70%;
+            left: 15%;
+        }
+
+        label {
+            left: 15%;
+        }
+
+        button {
+            left: 50%;
+            transform: translateX(-50%);
+            margin-top: 50px;
+        }
+
         #dj-contact {
-            left: 20px;
+             left: 20px;
+            img {
+             margin: 1rem;
+            }
+        }
+    }
+
+    @media screen and (max-width: 425px) {
+
+        p, input, textarea {
+            width: 90%;
+            left: 5%;
+        }
+
+        label {
+            left: 5%;
+        }
+
+        form {
+            a {
+                font-size: 1.4rem;
+            }
         }
     }

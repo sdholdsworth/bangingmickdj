@@ -21,17 +21,17 @@ html, body {
     -ms-user-select: none;
     -o-user-select: none;
     user-select: none;
- }
+}
 
- html {
-     //smooth scroll 
-     -webkit-scroll-behavior: smooth;
-     -khtml-scroll-behavior: smooth;
-     -moz-scroll-behavior: smooth;
-     -ms-scroll-behavior: smooth;
-     -o-scroll-behavior: smooth;
-     scroll-behavior: smooth;
- }
+html {
+    //smooth scroll 
+    -webkit-scroll-behavior: smooth;
+    -khtml-scroll-behavior: smooth;
+    -moz-scroll-behavior: smooth;
+    -ms-scroll-behavior: smooth;
+    -o-scroll-behavior: smooth;
+    scroll-behavior: smooth;
+}
 
 //  .App {
 //      position: relative;
@@ -40,7 +40,7 @@ html, body {
 //      width: 1500px;
 //  }
 
- .red {
+.red {
     color: $theme;
 }
 
