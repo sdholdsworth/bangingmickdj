@@ -7,8 +7,6 @@
     left: 50%;
     transform: translateX(-50%);
     height: 50px;
-    // background: rgba(27, 32, 37, 1);
-    // background-image: linear-gradient(to right, #b1ada8 0%, #304352 100%);
     background-image: linear-gradient(to right, #cecac5 0%,  #9c9996 25%, #405a6d 75%, #304352 100%);
     overflow: hidden;
 
@@ -20,9 +18,11 @@
         top: 50%;
         transform: translate(-50%, -50%);
         font-size: 0.8rem;
-        // color: rgb(245, 245, 245);
-        // color: rgba(27, 32, 37, 1) !important;
         color: $white !important;
+        line-height: 1.5;
+        text-align: center;
+        width: inherit;
+        padding: 10px 20px;
     }
 
     strong {
@@ -33,27 +33,74 @@
 
     #social {
         position: absolute;
-        left: 88%;
+        right: 1%;
         top: 50%;
         transform: translateY(-50%);
+        text-align: center;
+        
 
         #copy {
-            // color: black !important;
-            color: $white !important;
+            color: $white;
         }
 
         i {
-            // color: whitesmoke;
-            // color: rgba(27, 32, 37, 1) !important;
             color: $white;
             font-size: 2.5rem;
             margin-right: 20px;
             transition: all 0.25s ease-in-out;
+            
 
             &:hover {
-                color: red !important;
+                color: red;
                 cursor: pointer;
                 transition: all 0.25s ease-in-out;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+
+    .footer {
+
+        #social {
+            i {
+                font-size: 2.2rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+
+    .footer {
+        height: 100px;
+
+        span {
+            top: 75%;
+            font-size: 0.7rem; 
+        }
+
+        #social {
+            top: 15%;
+            right: 50%;
+            transform: translateX(50%);
+
+            i {
+                font-size: 2.2rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .footer {
+        #social {
+            top: 10%;
+            width: 100%;
+            
+            i {
+                font-size: 1.9rem;
             }
         }
     }
