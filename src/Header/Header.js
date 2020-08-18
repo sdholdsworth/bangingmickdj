@@ -230,13 +230,13 @@ const Header = () => {
                             <li><a id="nav-home" className="current" href="#home" onClick={ locationHome }>Home</a></li>
                             <li><a id="nav-about" href="#about" onClick={ locationAbout }>About</a></li>
                             <li><a id="nav-gallery" href="#gallery" onClick={ locationGallery }>Gallery</a></li>
-                            <li><a id="nav-collection" href="#collection" onClick={ locationCollection }>My Collection</a></li>
+                            <li><a id="nav-collection" href="#collection" onClick={ locationCollection }>Collection</a></li>
                             <li><a id="nav-contact" href="#contact" onClick={ locationContact }>Contact</a></li>
                         </ul>
                     </nav>
                 </div>
                 <div id="telephone">
-                    <span className="red">Tel:</span>&nbsp;&nbsp;<a href="tel:+34609765797">+34 609 76 57 97</a>
+                    <span className="red">Tel:</span><a href="tel:+34609765797">+34 609 76 57 97</a>
                 </div>
 
             </header>
