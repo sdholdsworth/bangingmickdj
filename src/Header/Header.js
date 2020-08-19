@@ -222,7 +222,7 @@ const Header = () => {
         <div id="home">
             <header className="header">
                 <div id="logo">
-                    <img src={ Logo } alt="dj banging mick"/>
+                    <a href="#home" onClick={ locationHome }><img src={ Logo } alt="dj banging mick"/></a>
                 </div>
                 <div id="navbar">
                     <nav>
