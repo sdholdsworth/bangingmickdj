@@ -169,7 +169,7 @@
     .header {
         #logo {
             img {
-              width: 150px;
+                width: 150px;
             }
         }
   
@@ -184,11 +184,22 @@
   
     .small-header {
         #navbar {
-          display: none;
+            display: none;
         }
   
         #telephone {
             display: none;
         } 
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .header {
+        #logo {
+            left: 0;
+            img {
+                width: 135px;
+            }
+        }
     }
 }
