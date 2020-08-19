@@ -14,7 +14,7 @@ const Hero = () => {
     
     return (
         <div className="hero-container">
-			<figure>	
+			<figure id="hero-collection">	
 				<img src={ Slider1 } alt="slider 1" />
 				<img src={ Slider2 } alt="slider 2" />
 				<img src={ Slider3 } alt="slider 3" />

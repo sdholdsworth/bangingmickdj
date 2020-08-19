@@ -38,7 +38,7 @@
 	}
 }
 
- figure {
+ figure#hero-collection {
 	position: relative;
 	width: 1000%;
 	margin: 0;
@@ -46,13 +46,19 @@
 	animation: slider 100s ease-in-out infinite 2.5s; //slider looks to be good with this setup but needs to be faster on desktop and as come down, go upto 100s
 	                                                 // or until it looks good and smooth on a mobile!!
 	//animation-timing-function: cubic-bezier(.99,.88,.88,.99);
+
+	img {
+		width: 10%;
+		height: 98vh;
+		float: left;
+	}
 }
 
-figure img {
-	width: 10%;
-	height: 98vh;
-	float: left;
-}
+// figure img {
+// 	width: 10%;
+// 	height: 98vh;
+// 	float: left;
+// }
 
 @keyframes slider {
 	0% { left: 0; }
@@ -124,8 +130,10 @@ figure img {
 		}
 	}
 	
-	figure img {
-		height: 90vh;
+	figure#hero-collection {
+		img {
+			height: 90vh;
+		}
 	}
 }
 
