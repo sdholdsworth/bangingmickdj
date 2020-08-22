@@ -1,6 +1,225 @@
 @import '../styles/settings.scss';
 
-#about {
+section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: no-wrap;
+    justify-content: space-between;
+    align-items: stretch;
+    align-content: center;
     position: relative;
-    top: 20px;
+
+        figure#dj-about {
+            order: 1;
+            position: relative; 
+            // left: 20px; 
+            //top: 100%;
+            height: inherit;      
+            // height: 300px;
+            // margin: 0 2rem 2rem 20px;
+            margin: 0 2rem 0 0;
+            
+            img {
+                position: relative;
+                width: 200px;
+                // left: 40px;
+                // top: 84%;
+                left: 50%;
+                top: 95%;
+                transform: translate(-50%, -50%);
+            }
+        }
+
+        article {
+            order: 2;
+            position: relative;
+            height: inherit;
+            margin: 0 2rem;
+            
+            p {
+                position: relative;
+                color: $black-lightest;
+                font-size: 1rem;
+                font-weight: 500;
+                line-height: 1.5;
+                letter-spacing: 1px;
+                width: 55%;
+                margin-bottom: 2rem;
+            }
+
+            p:nth-child(1) {
+                top: 0;
+                left: 0;
+            }
+
+            p:nth-child(2) {
+                top: 0px;
+                left: 20%;
+            }
+
+            p:nth-child(3) {
+                top: 0;
+                left: 40%;
+            }
+
+            p:nth-child(4) {
+                top: 0;
+                left: 60%;
+            }
+            
+        }
+
+        figure#djbm {
+            order: 3;
+            position: relative;
+            top: 2rem;
+            right: 2rem;
+            // height: 400px;
+            // margin: 2rem;
+            height: inherit;
+            // margin: 0 2rem;
+            margin: 0 0 0 2rem;
+
+            img {
+                position: relative;
+                width: 250px;
+                border-radius: 1rem;
+            }
+
+            figcaption {
+                position: relative;
+                width: 250px;
+                text-align: center;
+                font-weight: 900;
+                font-size: 1.3rem;
+                text-shadow: 2px 1px 3px #222222;
+            }
+        }
+}
+
+@media screen and (min-width: 1201px) and (max-width: 1400px) {
+    
+    section {        
+        article {
+            p {
+                width: 70%;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1200px) {
+    
+    section {        
+        article {
+            p {
+                width: 85%;
+            }
+
+            p:nth-child(1) {
+                left: -20%;
+            }
+
+            p:nth-child(2) {
+                left: 0;
+            }
+
+            p:nth-child(3) {
+                left: 20%;
+            }
+
+            p:nth-child(4) {
+                left: 40%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+
+    section {
+    flex-direction: column;
+
+        figure#dj-about {
+            order: 3;
+            width: 100%;
+            margin: 1rem 0 0;
+            left: -37.5%;
+
+            img {
+                top: 100px;
+            }
+        }
+
+        article {
+            order: 2;
+            width: 100%;
+            margin: 1rem 0;
+
+            p {
+                font-size: 1rem;
+                width: 75%;
+                margin-bottom: 2rem;
+                left: 50% !important;
+                transform: translateX(-50%); 
+            }
+        }
+
+        figure#djbm {
+            order: 1;
+            width: 100%;
+            right: 0;
+            left: 0;
+            margin: 1rem 0;
+
+            img {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            figcaption {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+
+    }
+}
+
+
+//Single Grid
+@media screen and (max-width: 768px) {
+
+    section {
+
+        figure#dj-about {
+            // order: 3;
+            // width: 100%;
+            margin: 0;
+            left: 50%;
+            transform: translateX(-50%);
+
+            img {
+                top: 100px;
+            }
+        }
+
+        article {
+            p {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 425px) {
+
+    section {
+
+        article {
+            p {
+                font-size: 0.85rem;
+            }
+        }
+    }
 }
