@@ -8,7 +8,7 @@
 }
 
 html, body {
-    //background: linear-gradient(-270deg, rgb(189, 2, 189), rgb(55, 55, 207), rgb(27, 216, 27));
+    // background: linear-gradient(-270deg, rgb(189, 2, 189), rgb(55, 55, 207), rgb(27, 216, 27));
     font-family: $headings; 
     overflow-x: hidden;
     //chrome fix for scroll adding to overall body width
@@ -45,11 +45,11 @@ html {
 }
 
 section {
-    min-height: 100vh;
     position: relative;
     width: 101vw;
     left: 50%;
     transform: translateX(-50%);
+    padding: 2rem;
 
     h2  {
         font-family: $headings;
@@ -59,12 +59,6 @@ section {
 
 .section-dark {
     background: rgba(27, 32, 37, 1);
-    
-    //clip-path: polygon(100% 0%, 100% 100%, 0% 100%, 0% 12.5%);
-    //clip-path: polygon(100% 0%, 100% 73%, 0% 100%, 0% 31%);
-    //clip-path: polygon(100% 0%, 100% 85%, 0% 100%, 0% 15%);
-    //padding: 10% 20px 0;
-    //padding: 22% 20px 0;
 
     h2  {
         color: #FFFFFF;
@@ -73,11 +67,6 @@ section {
 
 .section-light {
     background: rgba(245, 245, 245, 1);
-    
-    //clip-path: polygon(0% 0%, 0% 100%, 100% 87.5%, 100% 0%);
-    //padding: 20px 20px 12%;
-    // clip-path: polygon(100% 0%, 100% 85%, 0% 100%, 0% 15%);
-    // padding: 12% 20px 0;
     
     h2  {
         color: #222222 !important;
