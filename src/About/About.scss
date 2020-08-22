@@ -12,18 +12,12 @@ section {
         figure#dj-about {
             order: 1;
             position: relative; 
-            // left: 20px; 
-            //top: 100%;
             height: inherit;      
-            // height: 300px;
-            // margin: 0 2rem 2rem 20px;
             margin: 0 2rem 0 0;
             
             img {
                 position: relative;
                 width: 200px;
-                // left: 40px;
-                // top: 84%;
                 left: 50%;
                 top: 95%;
                 transform: translate(-50%, -50%);
@@ -65,8 +59,7 @@ section {
             p:nth-child(4) {
                 top: 0;
                 left: 60%;
-            }
-            
+            }            
         }
 
         figure#djbm {
@@ -74,10 +67,7 @@ section {
             position: relative;
             top: 2rem;
             right: 2rem;
-            // height: 400px;
-            // margin: 2rem;
             height: inherit;
-            // margin: 0 2rem;
             margin: 0 0 0 2rem;
 
             img {
@@ -186,15 +176,11 @@ section {
     }
 }
 
-
-//Single Grid
 @media screen and (max-width: 768px) {
 
     section {
 
         figure#dj-about {
-            // order: 3;
-            // width: 100%;
             margin: 0;
             left: 50%;
             transform: translateX(-50%);
