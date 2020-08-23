@@ -8,11 +8,11 @@
 }
 
 html, body {
-    // background: linear-gradient(-270deg, rgb(189, 2, 189), rgb(55, 55, 207), rgb(27, 216, 27));
     font-family: $headings; 
     overflow-x: hidden;
     //chrome fix for scroll adding to overall body width
     overflow-y: overlay;
+    //background: linear-gradient(-270deg, rgb(189, 2, 189), rgb(55, 55, 207), rgb(27, 216, 27)); - other color scheme
 
     //prevent user selection
     -webkit-user-select: none;
@@ -32,13 +32,6 @@ html {
     -o-scroll-behavior: smooth;
     scroll-behavior: smooth;
 }
-
-//  .App {
-//      position: relative;
-//      left: 50%;
-//      transform: translateX(-50%);
-//      width: 1500px;
-//  }
 
 .red {
     color: $theme;
