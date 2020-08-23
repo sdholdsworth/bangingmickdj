@@ -9,153 +9,251 @@ section {
     align-content: center;
     position: relative;
 
-    #contact-msg, #contact-form {
+    p, label {
+        color: #FFFFFF;
+        font-size: 1rem;
+        font-weight: 500;
+        line-height: 1.5;
+        letter-spacing: 1px;
+    }
+
+    p {
         position: relative;
+        width: 70%;
+        margin-top: 3rem;   
+    }
+
+    #contact-msg, #contact-form, #dj-contact {
+        position: relative;
+    }
+
+    #contact-msg, #contact-form {
         width: 50%;
         padding: 1rem 2rem;
         height: inherit;
         display: inline-block;
     }
-}
 
-p, label {
-    color: #FFFFFF;
-}
-
-p {
-    position: relative;
-    width: 50%;
-    margin-top: 3rem;
-}
-
-label {
-    position: relative;
-    display: block;
-    margin: 30px 0 10px;
-}
-
-input, textarea {
-    position: relative;
-    font-size: 0.8rem;
-    padding: 5px 10px;
-    width: 50%;
-    cursor: pointer;
-}
-
-textarea {
-    height: 300px;
-    resize: none;
-}
-
-button {
-    position: relative;
-    display: block;
-    margin-top: 30px;
-    border: 1px solid inset grey;
-    border-radius: 10px;
-    padding: 5px 10px;
-    cursor: pointer;
-
-    img, span {
-        display: inline;
-        position: relative;
-        cursor: pointer;
+    #contact-msg {
+        order: 1;
     }
 
-    img {
-        top: 2.5px;
-    }
+    #contact-form {
+        order: 2;
 
-    span {
-        top: -5px;
-        padding-left: 5px;
-        font-size: 0.95rem;
-    }
+        form {
+            position: relative;
 
-    }
-
-    form {
-        position: relative;
-
-        p {
-            margin: 4rem 0 1rem;
-        }
-
-        a {
-            // position: relative;
-            font-size: 1.8rem;
-            font-weight: 900 !important;
-            cursor: pointer;
+            label, input, textarea, button, image, span, a {
+                position: relative; 
+            }
+    
+            label {
+                display: block;
+                margin: 30px 0 10px;
+            }
+        
+            input, textarea {
+                font-size: 0.8rem;
+                padding: 5px 10px;
+                width: 70%;
+                cursor: pointer;
+            }
+        
+            textarea {
+                height: 300px;
+                resize: none;
+            }
+    
+            button {
+                display: block;
+                margin-top: 30px;
+                border: 1px solid inset grey;
+                border-radius: 10px;
+                padding: 7.5px 15px;
+                cursor: pointer;
+        
+                img, span {
+                    cursor: pointer;
+                }
+        
+                img {
+                    top: 2.5px;
+                    width: 30px;
+                }
+        
+                span {
+                    top: -2.5px;
+                    margin-left: 7.5px;
+                    font-size: 0.95rem;
+                }
+            }
+    
+            a {
+                display: block;
+                font-size: 1.8rem;
+                font-weight: 900 !important;
+                text-decoration: none;
+                cursor: pointer;
+                margin: 3rem 0 0;
+    
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
         }
     }
 
     #dj-contact {
+        order: 3;
         position: relative;
-        width: 10%;
         height: inherit;
-        bottom: 0 !important;
-        right: 91%;
-        // left: -90%;
-        // padding: 0 0 0 3rem;
-        
-        
+        bottom: 0;
+        right: 2rem;
+            
         img {
             position: relative;
-            top: 80%;
-            // padding: 1rem;
-            margin: 3rem;
+            top: 87.5%;
         }
     }
+}
 
-    @media screen and (max-width: 1024px) {
+@media screen and (min-width: 1025px) and (max-width: 1199px) {
 
-        section {
-            flex-direction: column;
+    section {
+        p {
+            width: 85%;
+        }
 
-            #contact-msg, #contact-form {
-                width: 100%;
-                left: 0;
-                padding: 1rem;     
+        #contact-form {
+            form {
+                input, textarea {
+                    width: 85%;
+                }
             }
+        }      
+    }
+}
+
+@media screen and (max-width: 1024px) {
+
+    section {
+        flex-direction: column;
+
+        #contact-msg, #contact-form {
+            width: 100%;
+            left: 0;
+            padding: 0;     
+        }
+    
+        p {
+            width: 80%;
+            left: 10%;
         }
 
-        p, input, textarea {
-            width: 70%;
-            left: 15%;
-        }
+        #contact-form {
+            form {
 
-        label {
-            left: 15%;
-        }
+                input, textarea {
+                    width: 80%;
+                    left: 10%;
+                }
 
-        button {
-            left: 50%;
-            transform: translateX(-50%);
-            margin-top: 50px;
+                label, a {
+                    left: 10%;
+                }
+
+                button {
+                    left: 50%;
+                    transform: translateX(-50%);
+                    margin-top: 50px;
+                }
+
+                
+            }
         }
 
         #dj-contact {
-             left: 20px;
+            width: 100%;
+            left: 0;
+            margin-top: 3rem;
+
             img {
-             margin: 1rem;
+                left: 83.5%
             }
         }
     }
+}
 
-    @media screen and (max-width: 425px) {
-
-        p, input, textarea {
-            width: 90%;
-            left: 5%;
-        }
-
-        label {
-            left: 5%;
-        }
-
-        form {
-            a {
-                font-size: 1.4rem;
+@media screen and (max-width: 768px) {
+    
+    section {
+        #dj-contact {
+            img {
+                left: 50%;
+                transform: translateX(-50%);
             }
         }
     }
+}
+
+
+@media screen and (max-width: 500px) {
+
+    section {
+        #contact-form {
+            form {
+                a {
+                    font-size: 1.4rem;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 425px) {
+
+    section {
+        p {
+            width: 100%;
+            left: 0;
+            font-size: 0.85rem;
+        }
+
+        #contact-form {
+            form {
+                P, label, input, textarea, a {
+                    width: 100%;
+                    left: 0;
+                }
+
+                p, label {
+                    font-size: 0.85rem;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 340px) {
+
+    section {  
+        #contact-form { 
+            form {
+                button { 
+                    img {
+                        width: 22.5px;
+                    }
+        
+                    span {
+                        font-size: 0.7rem;
+                    }
+                }
+
+                a {
+                    font-size: 1.1rem;
+                }
+            }
+        }
+    }
+}
