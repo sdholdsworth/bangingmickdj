@@ -43,26 +43,13 @@ section {
     left: 50%;
     transform: translateX(-50%);
     padding: 2rem;
-
-    h2  {
-        font-family: $headings;
-        font-size: 1.5rem;
-    }
 }
 
 .section-dark {
     background: rgba(27, 32, 37, 1);
-
-    h2  {
-        color: #FFFFFF;
-    }
 }
 
 .section-light {
     background: rgba(245, 245, 245, 1);
-    
-    h2  {
-        color: #222222 !important;
-    }
 }
 
