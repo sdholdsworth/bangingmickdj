@@ -18,16 +18,21 @@ const Contact = () => {
                         <input type="text" name="name" id="name" required placeholder="what's your name?" />
                         <label>Your Email</label>
                         <input type="email" name="email" id="email" required placeholder="what's your email address?" />
+                        <label>Your Number</label>
+                        <input type="tel" name="number" id="number" required placeholder="what's your contact number?" />
                         <label>Your Event</label>
                         <textarea name="event" id="event" required placeholder="please let me know of any key details relating to your enquiry, for example: are you looking to hire a DJ for a: venue / party / function / festival etc... location, dates etc... " />
-                        <button type="submit"><img id="email" src={ Email } alt="email"/><span>Send Message</span></button>
+                        <button type="submit">
+                            <img src={ Email } alt="email"/>
+                            <span>Send Message</span>
+                        </button>
                         <p>Alternatively, feel free to contact me by phone on:</p>
-                        <p><a className="red" href="tel:+34609765797">+34 609 76 57 97</a></p>
+                        <a className="red" href="tel:+34609765797">+34 609 76 57 97</a>
                     </form>
                 </div>
-                {/*<div id="dj-contact">
+                <div id="dj-contact">
                     <img src={ DJContact } alt="dj contact"></img>
-                </div>*/}
+                </div>
             </section>
         </div>
     )
