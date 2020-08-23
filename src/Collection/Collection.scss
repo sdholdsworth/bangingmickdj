@@ -1,5 +1,43 @@
 @import '../styles/settings.scss';
 
-p {
-    color: green;
+section#collection {
+    display: block;
+    position: relative;
+    
+    p, a {
+        position: relative;
+        color: $black-lightest;
+    }
+
+    p {
+        width: 100%;
+        margin-bottom: 3rem;
+    }
+
+    #collection-samples {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        position: relative;
+        width: 100%;
+
+        iframe {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            margin: 1.5rem;
+        }
+    }
+}
+
+@media screen and (max-width: 340px) {
+
+    section#collection {
+        #collection-samples {
+            iframe {
+                width: 250px;
+                height: 250px;
+            }
+        }
+    }
 }
