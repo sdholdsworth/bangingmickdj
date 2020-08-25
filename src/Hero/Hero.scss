@@ -2,39 +2,43 @@
 
 .hero-container {
 	position: relative;
-	// position: sticky;
-	 //top: 20px;
 	width: 101vw;
 	left: 50%;
 	transform: translateX(-50%);
 	margin: 0;
 	padding: 0;
 	overflow: hidden;
-	height: 98vh;
-	top: 61px; //start from small size header position
+	height: 100vh;
+	top: 110px;
 }
 
 .hero-overlay {
-	background: rgba(34, 34, 34, 0.5);
+	background: rgba(34, 34, 34, 0.65);
 	position: absolute;
 	width: 101vw;
-	left: 50%;
-	transform: translateX(-50%);
+	left: 0;
+	top: 0;
+	bottom: 0;
+	right: 0;
 	margin: 0;
 	padding: 0;
 	overflow: hidden;
 	z-index: 9999;
-	height: 98vh;
+	height: 100vh;
 
 	h1 {
 		font-family: $headings;
 		font-size: 5.5rem;
+		font-weight: 900;
 		position: absolute;
-		display: inline;
-		top: 50%;
+		top: 40%;
 		left: 50%;
 		transform: translate(-50%, -50%);
 		text-align: center;
+
+		i {
+			font-weight: 100;
+		}
 	}
 }
 
@@ -43,22 +47,14 @@
 	width: 1000%;
 	margin: 0;
 	left: 0;
-	animation: slider 100s ease-in-out infinite 2.5s; //slider looks to be good with this setup but needs to be faster on desktop and as come down, go upto 100s
-	                                                 // or until it looks good and smooth on a mobile!!
-	//animation-timing-function: cubic-bezier(.99,.88,.88,.99);
+	animation: slider 80s linear infinite 2.5s;
 
 	img {
 		width: 10%;
-		height: 98vh;
+		height: 100vh;
 		float: left;
 	}
 }
-
-// figure img {
-// 	width: 10%;
-// 	height: 98vh;
-// 	float: left;
-// }
 
 @keyframes slider {
 	0% { left: 0; }
@@ -104,48 +100,21 @@
 	100% { left: -900%; }
 }
 
-.red {
-	color: red;
-	display: inline;
-	font-weight: 500 !important;
-	font-style: oblique;
-}
-
-.white {
-	color: white;
-	display: inline;
-	font-weight: 900;
-}
-
 @media screen and (max-width: 768px) {
-	.hero-container {
-		height: 90vh;
-	}
-	
 	.hero-overlay {
-		height: 90vh;
-
 		h1 {
-			font-size: 4.8rem;
+			font-size: 4.4rem;
 		}
 	}
 	
 	figure#hero-collection {
 		img {
-			height: 90vh;
+			height: 100vh;
 		}
 	}
 }
 
 @media screen and (max-width: 650px) {
-	.hero-overlay {
-		h1 {
-			font-size: 4rem;
-		}
-	}
-}
-
-@media screen and (max-width: 550px) {
 	.hero-overlay {
 		h1 {
 			font-size: 3rem;
@@ -165,6 +134,38 @@
 	.hero-overlay {
 		h1 {
 			font-size: 2rem;
+		}
+	}
+}
+
+@media screen and (max-height: 600px) {
+	.hero-overlay {
+		h1 {
+			top: 30%;
+		}
+	}
+}
+
+@media screen and (max-height: 425px) {
+	.hero-overlay {
+		h1 {
+			top: 25%;
+		}
+	}
+}
+
+@media screen and (max-height: 375px) {
+	.hero-overlay {
+		h1 {
+			top: 20%;
+		}
+	}
+}
+
+@media screen and (max-height: 330px) {
+	.hero-overlay {
+		h1 {
+			top: 15%;
 		}
 	}
 }

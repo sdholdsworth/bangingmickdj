@@ -27,7 +27,7 @@ const Hero = () => {
 				<img src={ Slider1 } alt="slider 1" />
 			</figure>
 			<div className="hero-overlay">
-				<h1 className="white"> <span className="red">DJ&nbsp;</span>Banging Mick</h1>
+				<h1 className="white"><i className="red">DJ&nbsp;</i>Banging Mick</h1>
 			</div>
         </div>
     )
