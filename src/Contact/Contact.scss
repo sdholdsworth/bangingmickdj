@@ -10,7 +10,7 @@ section {
     position: relative;
 
     p, label {
-        color: #FFFFFF;
+        color: $white;
         font-size: 1rem;
         font-weight: 500;
         line-height: 1.5;
@@ -21,6 +21,19 @@ section {
         position: relative;
         width: 70%;
         margin-top: 3rem;   
+    }
+
+    h3 {
+        position: relative;
+        font-family: $signature;
+        font-size: 3rem;
+        font-weight: 500;
+        font-style: normal;
+        line-height: 2;
+        color: $white;
+        margin-top: 5rem;
+        transform: rotate(-10deg);
+        left: 7%;
     }
 
     #contact-msg, #contact-form, #dj-contact {
@@ -106,14 +119,21 @@ section {
 
     #dj-contact {
         order: 3;
-        position: relative;
-        height: inherit;
-        bottom: 0;
+        bottom: 2rem;
         right: 2rem;
             
         img {
             position: relative;
             top: 87.5%;
+        }
+    }
+}
+
+@media screen and (max-width: 1350px) {
+
+    section {
+        h3 {
+            left: 2%;
         }
     }
 }
@@ -151,6 +171,11 @@ section {
             left: 10%;
         }
 
+        h3 {
+            margin: 1.5rem 0 7rem;
+            left: 30%;
+        }
+
         #contact-form {
             form {
 
@@ -167,19 +192,30 @@ section {
                     left: 50%;
                     transform: translateX(-50%);
                     margin-top: 50px;
-                }
-
-                
+                }                
             }
         }
 
         #dj-contact {
             width: 100%;
             left: 0;
-            margin-top: 3rem;
+            margin-top: 2rem;
+            bottom: 0;
 
             img {
-                left: 83.5%
+                left: 81.5%;
+                top: 0;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 910px) {
+    
+    section {
+        #dj-contact {
+            img {
+                left: 78.5%;
             }
         }
     }
@@ -188,7 +224,14 @@ section {
 @media screen and (max-width: 768px) {
     
     section {
+        h3 {
+            left: 20%;
+        }
+
         #dj-contact {
+            right: 0;
+            bottom: 0;
+
             img {
                 left: 50%;
                 transform: translateX(-50%);
@@ -197,10 +240,26 @@ section {
     }
 }
 
+@media screen and (max-width: 675px) {
+    
+    section {
+        h3 {
+            font-size: 2.5rem;
+            left: 15%;
+            margin-bottom: 5rem;
+        }
+    }
+}
 
 @media screen and (max-width: 500px) {
 
     section {
+        h3 {
+            font-size: 2.2rem;
+            left: 5%;
+            margin-top: 3rem;
+        }
+        
         #contact-form {
             form {
                 a {
@@ -214,6 +273,7 @@ section {
 @media screen and (max-width: 425px) {
 
     section {
+
         p {
             width: 100%;
             left: 0;
@@ -238,6 +298,12 @@ section {
 @media screen and (max-width: 340px) {
 
     section {  
+        h3 {
+            font-size: 2rem;
+            left: 5%;
+            margin-top: 3rem;
+        }
+
         #contact-form { 
             form {
                 button { 
