@@ -1,237 +1,279 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './Header.scss';
 import Logo from '../img/logo.png';
-
-//function to switch to Home once scrolled up from anywhere below home
-window.addEventListener('scroll', function() {
-    var Ylocation = window.scrollY;
-    console.log('Y-Location = ', Ylocation);
-    
-    const navHome = document.getElementById('nav-home');
-    const navAbout = document.getElementById('nav-about');
-    const navGallery = document.getElementById('nav-gallery');
-    const navCollection = document.getElementById('nav-collection');
-    const navContact = document.getElementById('nav-contact');
-
-    const Hdr = document.querySelector('.header')
-
-
-    //check Y-location of section
-    // const HOME = document.getElementById('home');
-    //console.log('Home Location = ', window.HOME.scrollY);
-    
-
-    //shrink the fixed header when scrolled down
-    if(Ylocation >= 100) {
-        Hdr.classList.add('small-header');
-    } else {
-        Hdr.classList.remove('small-header');
-    }
-
-
-    //scroll location animation animation
-    // if(Ylocation <= 918) {
-    //     navHome.classList.add('current');
-    //     navAbout.classList.remove('current');
-    //     navGallery.classList.remove('current');
-    //     navCollection.classList.remove('current');
-    //     navContact.classList.remove('current');
-    // } else if (Ylocation >= 919 && Ylocation <= 1877) {
-    //     navHome.classList.remove('current');
-    //     navAbout.classList.add('current');
-    //     navGallery.classList.remove('current');
-    //     navCollection.classList.remove('current');
-    //     navContact.classList.remove('current');
-    // } else if (Ylocation >= 1878 && Ylocation <= 2856) {
-    //     navHome.classList.remove('current');
-    //     navAbout.classList.remove('current');
-    //     navGallery.classList.add('current');
-    //     navCollection.classList.remove('current');
-    //     navContact.classList.remove('current');
-    // } else if (Ylocation >= 2857 && Ylocation <= 3835) {
-    //     navHome.classList.remove('current');
-    //     navAbout.classList.remove('current');
-    //     navGallery.classList.remove('current');
-    //     navCollection.classList.add('current');
-    //     navContact.classList.remove('current');
-    // } else {
-    //     navHome.classList.remove('current');
-    //     navAbout.classList.remove('current');
-    //     navGallery.classList.remove('current');
-    //     navCollection.classList.remove('current');
-    //     navContact.classList.add('current');
-    // }
-
-
-});
 
 
 const Header = () => {
 
-    const locationHome = (e) => {
-
-        const handleLocationHome = () => {
-
-        const id = 'home';
-        const yOffset = 0; 
-        const element = document.getElementById(id);
-        const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
-        window.scrollTo({top: y, behavior: 'smooth'});
-        console.log('Y for HOME = ', y);
-        
-        
-        const navHome = document.getElementById('nav-home');
-        const navAbout = document.getElementById('nav-about');
-        const navGallery = document.getElementById('nav-gallery');
-        const navCollection = document.getElementById('nav-collection');
-        const navContact = document.getElementById('nav-contact');
-
-        navHome.classList.add('current');
-        navAbout.classList.remove('current');
-        navGallery.classList.remove('current');
-        navCollection.classList.remove('current');
-        navContact.classList.remove('current');
-        
-        }
-
-        e.preventDefault();
-        //add the event listener to the Home navigation link
-        const navHome = document.getElementById('nav-home');
-        navHome.addEventListener('click', handleLocationHome());
-    }
-
-    const locationAbout = (e) => {
-
-        const handleLocationAbout = () => {
-        
-        const id = 'about';
-        const yOffset = -60; 
-        const element = document.getElementById(id);
-        const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
-        window.scrollTo({top: y, behavior: 'smooth'});
-        console.log('Y for ABOUT = ', y);
-
-        const navHome = document.getElementById('nav-home');
-        const navAbout = document.getElementById('nav-about');
-        const navGallery = document.getElementById('nav-gallery');
-        const navCollection = document.getElementById('nav-collection');
-        const navContact = document.getElementById('nav-contact');
-
-        navHome.classList.remove('current');
-        navAbout.classList.add('current');
-        navGallery.classList.remove('current');
-        navCollection.classList.remove('current');
-        navContact.classList.remove('current');
-        }
-        //prevent default URL prefix behaviour
-        e.preventDefault();
-        //add the event listener to the About navigation link
-        const navAbout = document.getElementById('nav-about');
-        navAbout.addEventListener('click', handleLocationAbout());
-        
-    }
-
-    const locationGallery = (e) => {
-
-        const handleLocationGallery = () => {
-        
-        const id = 'gallery';
-        const yOffset = -60; 
-        const element = document.getElementById(id);
-        const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
-        window.scrollTo({top: y, behavior: 'smooth'});
-        
-        const navHome = document.getElementById('nav-home');
-        const navAbout = document.getElementById('nav-about');
-        const navGallery = document.getElementById('nav-gallery');
-        const navCollection = document.getElementById('nav-collection');
-        const navContact = document.getElementById('nav-contact');
-
-        navHome.classList.remove('current');
-        navAbout.classList.remove('current');
-        navGallery.classList.add('current');
-        navCollection.classList.remove('current');
-        navContact.classList.remove('current');
-        }
-
-        e.preventDefault()
-        //add the event listener to the Gallery navigation link
-        const navGallery = document.getElementById('nav-gallery');
-        navGallery.addEventListener('click', handleLocationGallery());
-    }
-
-    const locationCollection = (e) => {
-
-        const handleLocationCollection = () => {
-        
-        const id = 'collection';
-        const yOffset = -60; 
-        const element = document.getElementById(id);
-        const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
-        window.scrollTo({top: y, behavior: 'smooth'});
-        
-        const navHome = document.getElementById('nav-home');
-        const navAbout = document.getElementById('nav-about');
-        const navGallery = document.getElementById('nav-gallery');
-        const navCollection = document.getElementById('nav-collection');
-        const navContact = document.getElementById('nav-contact');
-
-        navHome.classList.remove('current');
-        navAbout.classList.remove('current');
-        navGallery.classList.remove('current');
-        navCollection.classList.add('current');
-        navContact.classList.remove('current');
-        }
-        
-        e.preventDefault()
-        //add the event listener to the Gallery navigation link
-        const navCollection = document.getElementById('nav-collection');
-        navCollection.addEventListener('click', handleLocationCollection());
-    }
-
-    const locationContact = (e) => {
-
-        const handleLocationContact = () => {
+    //SCROLL Navigation
+    //hooks for scroll navigation
+    const [ yLocation, setYLocation ] = useState(window.scrollY);    
     
-        const id = 'contact';
-        const yOffset = -60; 
-        const element = document.getElementById(id);
-        const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
-        window.scrollTo({top: y, behavior: 'smooth'});
+    const handleScroll = () => {
 
-        const navHome = document.getElementById('nav-home');
-        const navAbout = document.getElementById('nav-about');
-        const navGallery = document.getElementById('nav-gallery');
-        const navCollection = document.getElementById('nav-collection');
-        const navContact = document.getElementById('nav-contact');
+        //variables
+        const navHome = document.getElementById('nav-home'),
+        navAbout = document.getElementById('nav-about'),
+        navGallery = document.getElementById('nav-gallery'),
+        navCollection = document.getElementById('nav-collection'),
+        navContact = document.getElementById('nav-contact'),
+        Hdr = document.querySelector('.header');
 
-        navHome.classList.remove('current');
-        navAbout.classList.remove('current');
-        navGallery.classList.remove('current');
-        navCollection.classList.remove('current');
-        navContact.classList.add('current');
+        //update Y-axis position
+        setYLocation(window.scrollY);
+
+        //Upon scrolling down, reduce the size of the fixed header
+        if(yLocation >= 100) {
+            Hdr.classList.add('small-header');
+        } else {
+            Hdr.classList.remove('small-header');
+        }
+
+        //Determining the scroll location against section locations (for navbar link animation update on scroll)
+        //1. determine the locations of each section 
+        const  Home = document.getElementById('home'),
+               About = document.getElementById('about'),
+               Gallery = document.getElementById('gallery'),
+               Collection = document.getElementById('collection'),
+               Contact = document.getElementById('contact'),
+               yOffsetHome = 0, //zero offset for home location
+               yOffset = -60, //offset for small header 
+               HomeLocation = Home.getBoundingClientRect().top + window.pageYOffset + yOffsetHome,
+               AboutLocation = About.getBoundingClientRect().top + window.pageYOffset + yOffset,
+               GalleryLocation = Gallery.getBoundingClientRect().top + window.pageYOffset + yOffset,
+               CollectionLocation = Collection.getBoundingClientRect().top + window.pageYOffset + yOffset,
+               ContactLocation = Contact.getBoundingClientRect().top + window.pageYOffset + yOffset;         
+
+        //2. compare the current YLocation value to the sections start & end values and if in this range, set the desired class on the navigation links 
+        if(yLocation >= HomeLocation && yLocation < AboutLocation) {
+            navHome.classList.add('current');
+            navAbout.classList.remove('current');
+            navGallery.classList.remove('current');
+            navCollection.classList.remove('current');
+            navContact.classList.remove('current');
+        } else if(yLocation >= AboutLocation && yLocation < GalleryLocation) {
+            navHome.classList.remove('current');
+            navAbout.classList.add('current');
+            navGallery.classList.remove('current');
+            navCollection.classList.remove('current');
+            navContact.classList.remove('current');
+        } else if(yLocation >= GalleryLocation && yLocation < CollectionLocation) {
+            navHome.classList.remove('current');
+            navAbout.classList.remove('current');
+            navGallery.classList.add('current');
+            navCollection.classList.remove('current');
+            navContact.classList.remove('current');
+        } else if(yLocation >= CollectionLocation && yLocation < ContactLocation) {
+            navHome.classList.remove('current');
+            navAbout.classList.remove('current');
+            navGallery.classList.remove('current');
+            navCollection.classList.add('current');
+            navContact.classList.remove('current');
+        } else {
+            navHome.classList.remove('current');
+            navAbout.classList.remove('current');
+            navGallery.classList.remove('current');
+            navCollection.classList.remove('current');
+            navContact.classList.add('current');
+        }        
+    }
+
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll); //clear down what's in memory (like unmount method in CBC's)
         }
         
-        e.preventDefault()
-        //add the event listener to the Gallery navigation link
-        const navContact = document.getElementById('nav-contact');
-        navContact.addEventListener('click', handleLocationContact());
+    })
+
+
+     //CLICK Navigation       
+    //"Home" CLICK Navigation 
+    const clickedHome = (e) => {
+
+        //variables
+        const navHome = document.getElementById('nav-home'),
+        navAbout = document.getElementById('nav-about'),
+        navGallery = document.getElementById('nav-gallery'),
+        navCollection = document.getElementById('nav-collection'),
+        navContact = document.getElementById('nav-contact');
+
+        //event listener function (pre-defined - more optimal this way (less calls invoked))
+        const handleClickHome = () => {
+            
+            //determine "Home" section location & setup smooth scroll functionality
+            const id = 'home',
+                  element = document.getElementById(id),
+                  y = element.getBoundingClientRect().top + window.pageYOffset;
+            window.scrollTo({top: y, behavior: 'smooth'});
+
+            //add current class to "Home" link and ensure current class is cleared from any other links
+            navHome.classList.add('current');
+            navAbout.classList.remove('current');
+            navGallery.classList.remove('current');
+            navCollection.classList.remove('current');
+            navContact.classList.remove('current');
+        }
+
+        //add the event listener for the "Home" navigation link
+        navHome.addEventListener('click', handleClickHome());
+
+        //prevent the default hash ID being added to the URL
+        e.preventDefault();
     }
-    
+
+    //"About" CLICK Navigation 
+    const clickedAbout = (e) => {
+
+        //variables
+        const navHome = document.getElementById('nav-home'),
+              navAbout = document.getElementById('nav-about'),
+              navGallery = document.getElementById('nav-gallery'),
+              navCollection = document.getElementById('nav-collection'),
+              navContact = document.getElementById('nav-contact');
+
+        //event listener function (pre-defined - more optimal this way (less calls invoked))
+        const handleClickAbout = () => {
+            
+            //determine "About" section location & setup smooth scroll functionality
+            const id = 'about',
+                  element = document.getElementById(id),
+                  y = element.getBoundingClientRect().top + window.pageYOffset;
+            window.scrollTo({top: y, behavior: 'smooth'});
+
+            //add current class to "About" link and ensure current class is cleared from any other links
+            navHome.classList.remove('current');
+            navAbout.classList.add('current');
+            navGallery.classList.remove('current');
+            navCollection.classList.remove('current');
+            navContact.classList.remove('current');
+        }
+
+        //add the event listener for the "About" navigation link
+        navAbout.addEventListener('click', handleClickAbout());
+
+        //prevent the default hash ID being added to the URL
+        e.preventDefault();
+    }
+
+    //"Gallery" CLICK Navigation 
+    const clickedGallery = (e) => {
+
+        //variables
+        const navHome = document.getElementById('nav-home'),
+              navAbout = document.getElementById('nav-about'),
+              navGallery = document.getElementById('nav-gallery'),
+              navCollection = document.getElementById('nav-collection'),
+              navContact = document.getElementById('nav-contact');
+
+        //event listener function (pre-defined - more optimal this way (less calls invoked))
+        const handleClickGallery = () => {
+            
+            //determine "Gallery" section location & setup smooth scroll functionality
+            const id = 'gallery', 
+                  element = document.getElementById(id),
+                  y = element.getBoundingClientRect().top + window.pageYOffset;
+            window.scrollTo({top: y, behavior: 'smooth'});
+
+            //add current class to "Gallery" link and ensure current class is cleared from any other links
+            navHome.classList.remove('current');
+            navAbout.classList.remove('current');
+            navGallery.classList.add('current');
+            navCollection.classList.remove('current');
+            navContact.classList.remove('current');
+            
+        }
+
+        //add the event listener for the "Gallery" navigation link
+        navGallery.addEventListener('click', handleClickGallery());
+
+        //prevent the default hash ID being added to the URL
+        e.preventDefault();
+    }
+
+    //"Collection" CLICK Navigation 
+    const clickedCollection = (e) => {
+
+        //variables
+        const navHome = document.getElementById('nav-home'),
+              navAbout = document.getElementById('nav-about'),
+              navGallery = document.getElementById('nav-gallery'),
+              navCollection = document.getElementById('nav-collection'),
+              navContact = document.getElementById('nav-contact');
+
+        //event listener function (pre-defined - more optimal this way (less calls invoked))
+        const handleClickCollection = () => {
+            
+            //determine "Collection" section location & setup smooth scroll functionality
+            const id = 'collection',
+                  element = document.getElementById(id),
+                  y = element.getBoundingClientRect().top + window.pageYOffset;
+            window.scrollTo({top: y, behavior: 'smooth'});
+
+            //add current class to "Collection" link and ensure current class is cleared from any other links
+            navHome.classList.remove('current');
+            navAbout.classList.remove('current');
+            navGallery.classList.remove('current');
+            navCollection.classList.add('current');
+            navContact.classList.remove('current');
+        }
+
+        //add the event listener for the "Collection" navigation link
+        navCollection.addEventListener('click', handleClickCollection());
+
+        //prevent the default hash ID being added to the URL
+        e.preventDefault();
+    }
+
+    //"Contact" CLICK Navigation 
+    const clickedContact = (e) => {
+
+        //variables
+        const navHome = document.getElementById('nav-home'),
+              navAbout = document.getElementById('nav-about'),
+              navGallery = document.getElementById('nav-gallery'),
+              navCollection = document.getElementById('nav-collection'),
+              navContact = document.getElementById('nav-contact');
+
+        //event listener function (pre-defined - more optimal this way (less calls invoked))
+        const handleClickContact = () => {
+            
+            //determine "Contact" section location & setup smooth scroll functionality
+            const id = 'contact',
+                  element = document.getElementById(id),
+                  y = element.getBoundingClientRect().top + window.pageYOffset;
+            window.scrollTo({top: y, behavior: 'smooth'});
+
+            //add current class to "Contact" link and ensure current class is cleared from any other links
+            navHome.classList.remove('current');
+            navAbout.classList.remove('current');
+            navGallery.classList.remove('current');
+            navCollection.classList.remove('current');
+            navContact.classList.add('current');
+        }
+
+        //add the event listener for the "Contact" navigation link
+        navContact.addEventListener('click', handleClickContact());
+
+        //prevent the default hash ID being added to the URL
+        e.preventDefault();
+    }
+        
     return (
         <div id="home">
             <header className="header">
                 <div id="logo">
-                    <a href="#home" onClick={ locationHome }><img src={ Logo } alt="dj banging mick"/></a>
+                    <a href="#home" onClick={ clickedHome }><img src={ Logo } alt="dj banging mick"/></a>
                 </div>
                 <div id="navbar">
                     <nav>
                         <ul>
-                            <li><a id="nav-home" className="current" href="#home" onClick={ locationHome }>Home</a></li>
-                            <li><a id="nav-about" href="#about" onClick={ locationAbout }>About</a></li>
-                            <li><a id="nav-gallery" href="#gallery" onClick={ locationGallery }>Gallery</a></li>
-                            <li><a id="nav-collection" href="#collection" onClick={ locationCollection }>Collection</a></li>
-                            <li><a id="nav-contact" href="#contact" onClick={ locationContact }>Contact</a></li>
+                            <li><a id="nav-home" className="current" href="#home" onClick={ clickedHome }>Home</a></li>
+                            <li><a id="nav-about" href="#about" onClick={ clickedAbout }>About</a></li>
+                            <li><a id="nav-gallery" href="#gallery" onClick={ clickedGallery }>Gallery</a></li>
+                            <li><a id="nav-collection" href="#collection" onClick={ clickedCollection }>Collection</a></li>
+                            <li><a id="nav-contact" href="#contact" onClick={ clickedContact } >Contact</a></li>
                         </ul>
                     </nav>
                 </div>

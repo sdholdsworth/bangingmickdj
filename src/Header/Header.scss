@@ -18,9 +18,19 @@
     height: 110px;
     top: 0;
     left: 50%;
+    -webkit-transform: translateX(-50%); 
+    -khtml-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
     transform: translateX(-50%);
     z-index: 9999;
     background-image: linear-gradient(to right, #cecac5 0%,  #9c9996 25%, #405a6d 75%, #304352 100%);
+    -webkit-transition: all 0.3s ease-out;
+    -khtml-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -ms-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
     transition: all 0.3s ease-out;
     overflow: hidden;    
 
@@ -39,10 +49,20 @@
         position: absolute;
         left: 10px;
         top: 50%;
+        -webkit-transform: translateY(-50%); 
+        -khtml-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
         transform: translateY(-50%);
 
         img {
             width: 180px;
+            -webkit-transition: all 0.3s ease-out;
+            -khtml-transition: all 0.3s ease-out;
+            -moz-transition: all 0.3s ease-out;
+            -ms-transition: all 0.3s ease-out;
+            -o-transition: all 0.3s ease-out;
             transition: all 0.3s ease-out;
         }
     }
@@ -53,6 +73,11 @@
         position: absolute;
         left: 50%;
         top: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -khtml-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
         transform: translate(-50%, -50%);
 
         li {
@@ -68,6 +93,11 @@
         a {
             text-decoration: none;
             color: $white;
+            -webkit-transition: all 0.3s ease-out;
+            -khtml-transition: all 0.3s ease-out;
+            -moz-transition: all 0.3s ease-out;
+            -ms-transition: all 0.3s ease-out;
+            -o-transition: all 0.3s ease-out;
             transition: all 0.3s ease-out;
             font-family: $headings;
             font-size: 1.2rem;
@@ -80,10 +110,20 @@
         position: absolute;
         right: 25px;
         top: 50%;
+        -webkit-transform: translateY(-50%);
+        -khtml-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
         transform: translateY(-50%);
 
         span, a {
             font-size: 1rem;  
+            -webkit-transition: all 0.3s ease-out;
+            -khtml-transition: all 0.3s ease-out;
+            -moz-transition: all 0.3s ease-out;
+            -ms-transition: all 0.3s ease-out;
+            -o-transition: all 0.3s ease-out;
             transition: all 0.3s ease-out;
         }
 
@@ -105,11 +145,21 @@
 
 .small-header {
     height: 60px;
+    -webkit-transition: all 0.3s ease-out;
+    -khtml-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -ms-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
     transition: all 0.3s ease-out;
 
 	#logo {
         img {
             width: 100px !important;
+            -webkit-transition: all 0.3s ease-out;
+            -khtml-transition: all 0.3s ease-out;
+            -moz-transition: all 0.3s ease-out;
+            -ms-transition: all 0.3s ease-out;
+            -o-transition: all 0.3s ease-out;
             transition: all 0.3s ease-out;
         }
     }
@@ -117,6 +167,11 @@
     #navbar {
         a {
             font-size: 1rem;
+            -webkit-transition: all 0.3s ease-out;
+            -khtml-transition: all 0.3s ease-out;
+            -moz-transition: all 0.3s ease-out;
+            -ms-transition: all 0.3s ease-out;
+            -o-transition: all 0.3s ease-out;
             transition: all 0.3s ease-out;
         }
     }
@@ -124,6 +179,11 @@
     #telephone {
         span, a {
             font-size: 0.95rem;  
+            -webkit-transition: all 0.3s ease-out;
+            -khtml-transition: all 0.3s ease-out;
+            -moz-transition: all 0.3s ease-out;
+            -ms-transition: all 0.3s ease-out;
+            -o-transition: all 0.3s ease-out;
             transition: all 0.3s ease-out;
         }
     }
