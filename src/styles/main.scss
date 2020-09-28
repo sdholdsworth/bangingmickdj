@@ -33,6 +33,10 @@ html {
     scroll-behavior: smooth;
 }
 
+body {
+    background-image: linear-gradient(to right, #cecac5 0%,  #9c9996 25%, #405a6d 75%, #304352 100%);
+}
+
 .red {
     color: $theme;
 }
@@ -43,8 +47,13 @@ html {
 
 section {
     position: relative;
-    width: 101vw;
+    width: 100vw;
     left: 50%;
+    -webkit-transform: translateX(-50%); 
+    -khtml-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
     transform: translateX(-50%);
     padding: 2rem;
 }
