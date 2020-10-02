@@ -14,8 +14,8 @@
     align-items: stretch;
     align-content: center;
     position: fixed;
-    width: 101vw;
-    height: 110px;
+    width: 100vw;
+    height: 100px;
     top: 0;
     left: 50%;
     -webkit-transform: translateX(-50%); 
@@ -26,12 +26,12 @@
     transform: translateX(-50%);
     z-index: 9999;
     background-image: linear-gradient(to right, #cecac5 0%,  #9c9996 25%, #405a6d 75%, #304352 100%);
-    -webkit-transition: all 0.3s ease-out;
-    -khtml-transition: all 0.3s ease-out;
-    -moz-transition: all 0.3s ease-out;
-    -ms-transition: all 0.3s ease-out;
-    -o-transition: all 0.3s ease-out;
-    transition: all 0.3s ease-out;
+    -webkit-transition: all .12s ease-out;
+    -khtml-transition: all .12s ease-out;
+    -moz-transition: all .12s ease-out;
+    -ms-transition: all .12s ease-out;
+    -o-transition: all .12s ease-out;
+    transition: all .12s ease-out;
     overflow: hidden;    
 
     span, a, li, img {
@@ -57,13 +57,13 @@
         transform: translateY(-50%);
 
         img {
-            width: 180px;
-            -webkit-transition: all 0.3s ease-out;
-            -khtml-transition: all 0.3s ease-out;
-            -moz-transition: all 0.3s ease-out;
-            -ms-transition: all 0.3s ease-out;
-            -o-transition: all 0.3s ease-out;
-            transition: all 0.3s ease-out;
+            width: 150px;
+            -webkit-transition: all .12s ease-out;
+            -khtml-transition: all .12s ease-out;
+            -moz-transition: all .12s ease-out;
+            -ms-transition: all .12s ease-out;
+            -o-transition: all .12s ease-out;
+            transition: all .12s ease-out;
         }
     }
 
@@ -93,12 +93,12 @@
         a {
             text-decoration: none;
             color: $white;
-            -webkit-transition: all 0.3s ease-out;
-            -khtml-transition: all 0.3s ease-out;
-            -moz-transition: all 0.3s ease-out;
-            -ms-transition: all 0.3s ease-out;
-            -o-transition: all 0.3s ease-out;
-            transition: all 0.3s ease-out;
+            -webkit-transition: all .12s ease-out;
+            -khtml-transition: all .12s ease-out;
+            -moz-transition: all .12s ease-out;
+            -ms-transition: all .12s ease-out;
+            -o-transition: all .12s ease-out;
+            transition: all .12s ease-out;
             font-family: $headings;
             font-size: 1.2rem;
         }
@@ -119,12 +119,12 @@
 
         span, a {
             font-size: 1rem;  
-            -webkit-transition: all 0.3s ease-out;
-            -khtml-transition: all 0.3s ease-out;
-            -moz-transition: all 0.3s ease-out;
-            -ms-transition: all 0.3s ease-out;
-            -o-transition: all 0.3s ease-out;
-            transition: all 0.3s ease-out;
+            -webkit-transition: all .12s ease-out;
+            -khtml-transition: all .12s ease-out;
+            -moz-transition: all .12s ease-out;
+            -ms-transition: all .12s ease-out;
+            -o-transition: all .12s ease-out;
+            transition: all .12s ease-out;
         }
 
         span {
@@ -141,50 +141,101 @@
         }
     }
 
+    //Burger Menu -  don't display initially 
+    .btn-burger {
+        display: none;
+        position: absolute;
+        z-index: 5;
+        right: 2rem;
+        top: 50px;
+        transform: translateY(-50%);
+        cursor: pointer;
+    
+          .burger-btn-line {
+               width: 28px;
+               height: 3px;
+               margin: 0 0 5px 0;
+               background: #fff;
+               -webkit-transition: all 0.35s ease-out;
+               -ms-transition: all 0.35s ease-out;
+               -moz-transition: all 0.35s ease-out;
+               -o-transition: all 0.35s ease-out;
+               transition: all 0.35s ease-out;
+          } 
+  
+          //Rotate Menu Bar into X Close Sign
+          &.close {
+            -ms-transform: rotate(180deg);
+            transform: rotate(180deg);
+            right: 2rem;
+            // top: 50%;
+            top: 50px;
+            transform: translateY(-50%);
+  
+            .burger-btn-line {
+                //line 1 - rotate
+                &:nth-child(1) {
+                    -ms-transform: rotate(45deg) translate(6px, 6px);
+                    transform: rotate(45deg) translate(6px, 6px);
+                }
+                // line 2 - hide
+                &:nth-child(2) {
+                    opacity: 0;
+                }
+                //line 1 - rotate
+                &:nth-child(3) {
+                    -ms-transform: rotate(-45deg) translate(4px, -6px);
+                    transform: rotate(-45deg) translate(5px, -6px);
+                }
+            }
+          }
+    }
 }
 
 .small-header {
     height: 60px;
-    -webkit-transition: all 0.3s ease-out;
-    -khtml-transition: all 0.3s ease-out;
-    -moz-transition: all 0.3s ease-out;
-    -ms-transition: all 0.3s ease-out;
-    -o-transition: all 0.3s ease-out;
-    transition: all 0.3s ease-out;
+    position: fixed;
+    top: 0;
+    -webkit-transition: all .12s ease-out;
+    -khtml-transition: all .12s ease-out;
+    -moz-transition: all .12s ease-out;
+    -ms-transition: all .12s ease-out;
+    -o-transition: all .12s ease-out;
+    transition: all .12s ease-out;
 
-	#logo {
+    #logo {
         img {
             width: 100px !important;
-            -webkit-transition: all 0.3s ease-out;
-            -khtml-transition: all 0.3s ease-out;
-            -moz-transition: all 0.3s ease-out;
-            -ms-transition: all 0.3s ease-out;
-            -o-transition: all 0.3s ease-out;
-            transition: all 0.3s ease-out;
+            -webkit-transition: all .12s ease-out;
+            -khtml-transition: all .12s ease-out;
+            -moz-transition: all .12s ease-out;
+            -ms-transition: all .12s ease-out;
+            -o-transition: all .12s ease-out;
+            transition: all .12s ease-out;
         }
     }
     
     #navbar {
         a {
             font-size: 1rem;
-            -webkit-transition: all 0.3s ease-out;
-            -khtml-transition: all 0.3s ease-out;
-            -moz-transition: all 0.3s ease-out;
-            -ms-transition: all 0.3s ease-out;
-            -o-transition: all 0.3s ease-out;
-            transition: all 0.3s ease-out;
+            -webkit-transition: all .12s ease-out;
+            -khtml-transition: all .12s ease-out;
+            -moz-transition: all .12s ease-out;
+            -ms-transition: all .12s ease-out;
+            -o-transition: all .12s ease-out;
+            transition: all .12s ease-out;
         }
     }
 
     #telephone {
         span, a {
             font-size: 0.95rem;  
-            -webkit-transition: all 0.3s ease-out;
-            -khtml-transition: all 0.3s ease-out;
-            -moz-transition: all 0.3s ease-out;
-            -ms-transition: all 0.3s ease-out;
-            -o-transition: all 0.3s ease-out;
-            transition: all 0.3s ease-out;
+            -webkit-transition: all .12s ease-out;
+            -khtml-transition: all .12s ease-out;
+            -moz-transition: all .12s ease-out;
+            -ms-transition: all .12s ease-out;
+            -o-transition: all .12s ease-out;
+            transition: all .12s ease-out;
         }
     }
 }
@@ -219,7 +270,7 @@
 
       #telephone {
           span, a {
-              font-size: 0.80rem;
+              font-size: 0.8rem;
           }
       } 
   }
@@ -227,39 +278,68 @@
 
 @media screen and (max-width: 1024px) {
     .header {
+        height: 100px;
+        -webkit-transition: height .3s ease;
+        -khtml-transition: height .3s ease;
+        -moz-transition: height .3s ease;
+        -ms-transition: height .3s ease;
+        -o-transition: height .3s ease;
+        transition: height .3s ease;
+
+        &.expanded {
+            height: 380px;
+            -webkit-transition: height .3s ease;
+            -khtml-transition: height .3s ease;
+            -moz-transition: height .3s ease;
+            -ms-transition: height .3s ease;
+            -o-transition: height .3s ease;
+            transition: height .3s ease;
+        }    
+
         #logo {
+            top: 0;
+            -webkit-transform: translateY(0); 
+            -khtml-transform: translateY(0);
+            -moz-transform: translateY(0);
+            -ms-transform: translateY(0);
+            -o-transform: translateY(0);
+            transform: translateY(0);
+
             img {
                 width: 150px;
             }
         }
   
         #navbar {
-            display: none;
+            display: block;
+            top: 115px;
+            left: 20px;
+            -webkit-transform: translateX(0);
+            -khtml-transform: translateX(0);
+            -moz-transform: translateX(0);
+            -ms-transform: translateX(0);
+            -o-transform: translateX(0);
+            transform: translateX(0);
+
+            li {
+                display: block;
+                padding: 15px 0;
+            }
         }
   
         #telephone {
             display: none;
+        }
+
+        .btn-burger {
+            display: block;
         }
     }
   
     .small-header {
-        #navbar {
-            display: none;
-        }
   
         #telephone {
             display: none;
         } 
-    }
-}
-
-@media screen and (max-width: 425px) {
-    .header {
-        #logo {
-            left: 0;
-            img {
-                width: 135px;
-            }
-        }
     }
 }
