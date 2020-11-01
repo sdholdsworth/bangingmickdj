@@ -1,6 +1,6 @@
 @import '../styles/settings.scss';
 
-section {
+section#contact {
     display: flex;
     flex-direction: row;
     flex-wrap: no-wrap;
@@ -32,6 +32,11 @@ section {
         line-height: 2;
         color: $white;
         margin-top: 5rem;
+        -webkit-transform: rotate(-10deg);
+        -khtml-transform: rotate(-10deg);
+        -moz-transform: rotate(-10deg);
+        -ms-transform: rotate(-10deg);
+        -o-transform: rotate(-10deg);
         transform: rotate(-10deg);
         left: 7%;
     }
@@ -55,7 +60,6 @@ section {
         order: 2;
 
         form {
-            position: relative;
 
             label, input, textarea, button, image, span, a {
                 position: relative; 
@@ -119,28 +123,27 @@ section {
 
     #dj-contact {
         order: 3;
-        bottom: 20px;
-        right: 20px;
             
         img {
+            width: 160px;
             position: relative;
-            top: 87.5%;
+            left: -5px;
+            top: 85%;
         }
     }
 }
 
 @media screen and (max-width: 1350px) {
-
-    section {
+    section#contact {
         h3 {
             left: 2%;
         }
     }
 }
 
-@media screen and (min-width: 1025px) and (max-width: 1199px) {
 
-    section {
+@media screen and (min-width: 1025px) and (max-width: 1199px) {
+    section#contact {
         p {
             width: 85%;
         }
@@ -156,8 +159,7 @@ section {
 }
 
 @media screen and (max-width: 1024px) {
-
-    section {
+    section#contact {
         flex-direction: column;
 
         #contact-msg, #contact-form {
@@ -190,6 +192,11 @@ section {
 
                 button {
                     left: 50%;
+                    -webkit-transform: translateX(-50%);
+                    -khtml-transform: translateX(-50%);
+                    -moz-transform: translateX(-50%);
+                    -ms-transform: translateX(-50%);
+                    -o-transform: translateX(-50%);
                     transform: translateX(-50%);
                     margin-top: 50px;
                 }                
@@ -203,27 +210,25 @@ section {
             bottom: 0;
 
             img {
-                left: 81.5%;
-                top: 0;
+                left: 84%;
+                top: 20px;
             }
         }
     }
 }
 
 @media screen and (max-width: 910px) {
-    
-    section {
+    section#contact {
         #dj-contact {
             img {
-                left: 78.5%;
+                left: 80.5%;
             }
         }
     }
 }
 
 @media screen and (max-width: 768px) {
-    
-    section {
+    section#contact {
         h3 {
             left: 20%;
         }
@@ -233,7 +238,13 @@ section {
             bottom: 0;
 
             img {
+                width: 140px;
                 left: 50%;
+                -webkit-transform: translateX(-50%);
+                -khtml-transform: translateX(-50%);
+                -moz-transform: translateX(-50%);
+                -ms-transform: translateX(-50%);
+                -o-transform: translateX(-50%);
                 transform: translateX(-50%);
             }
         }
@@ -241,8 +252,7 @@ section {
 }
 
 @media screen and (max-width: 675px) {
-    
-    section {
+    section#contact {
         h3 {
             font-size: 2.5rem;
             left: 15%;
@@ -252,8 +262,7 @@ section {
 }
 
 @media screen and (max-width: 500px) {
-
-    section {
+    section#contact {
         h3 {
             font-size: 2.2rem;
             left: 5%;
@@ -271,8 +280,7 @@ section {
 }
 
 @media screen and (max-width: 425px) {
-
-    section {
+    section#contact {
 
         p {
             width: 100%;
@@ -296,8 +304,7 @@ section {
 }
 
 @media screen and (max-width: 340px) {
-
-    section {  
+    section#contact {  
         h3 {
             font-size: 2rem;
             left: 5%;
@@ -319,6 +326,21 @@ section {
                 a {
                     font-size: 1.1rem;
                 }
+            }
+        }
+    }
+}
+
+/* IE10+ specific styles*/
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) { 
+    #dj-contact {
+        display: none;
+    }
+
+    #contact-form { 
+        form {
+            button { 
+                width: 300px;
             }
         }
     }
