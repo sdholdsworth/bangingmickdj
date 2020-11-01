@@ -19,33 +19,72 @@ import Img_15 from "../img/dj_bm/15.jpg";
 import Img_16 from "../img/dj_bm/16.jpg";
 
 const Gallery = () => {
+
+    //When user clicks an image populate the modal with the current thumbnail image source
+    const HandleClickImg = () => {
+        const imageGallery = document.querySelectorAll('.thumbnail'),    
+              modal = document.querySelector("#Modal");
+
+        for(let i = 0; i < imageGallery.length; i++) {
+            imageGallery[i].onclick = function() {     
+                modal.style.display = "block";
+                let modalImg = document.createElement('IMG');
+                modalImg.id = 'modal-img';
+                modalImg.classList.add('modal-content');
+                modalImg.src = imageGallery[i].src;
+                modalImg.alt = imageGallery[i].alt;
+                modal.appendChild(modalImg);       
+            };
+        }
+        
+    };
+
+    //When the user clicks the close button, close the modal & remove displayed modal image from the DOM
+    const handleModalCloseBtn = () => { 
+        const modal = document.querySelector("#Modal");
+        let modalImg = document.querySelector('#modal-img');
+        modal.style.display = "none";   
+        modalImg.parentNode.removeChild(modalImg);
+    }
+
+    //When the user clicks anywhere outside of the modal image, close the modal & remove displayed modal image from the DOM
+    window.onclick = function(e) {
+        const modal = document.querySelector("#Modal");
+        if (e.target === modal) {
+            let modalImg = document.querySelector('#modal-img');
+            modal.style.display = "none";   
+            modalImg.parentNode.removeChild(modalImg);
+        }
+    }
+
     return (
         <div>
             <section id="gallery" className="section-dark">
                 <div id="gallery-images">
-                    <img src={ Img_01 } alt="img 1"></img>
-                    <img src={ Img_02 } alt="img 2"></img>
-                    <img src={ Img_03 } alt="img 3"></img>
-                    <img src={ Img_04 } alt="img 4"></img>
-                    <img src={ Img_05 } alt="img 5"></img>
-                    <img src={ Img_06 } alt="img 6"></img>
-                    <img src={ Img_07 } alt="img 7"></img>
-                    <img src={ Img_08 } alt="img 8"></img>
-                    <img src={ Img_09 } alt="img 9"></img>
-                    <img src={ Img_10 } alt="img 10"></img>
-                    <img src={ Img_11 } alt="img 11"></img>
-                    <img src={ Img_12 } alt="img 12"></img>
-                    <img src={ Img_13 } alt="img 13"></img>
-                    <img src={ Img_14 } alt="img 14"></img>
-                    <img src={ Img_15 } alt="img 15"></img>
-                    <img src={ Img_16 } alt="img 16"></img>
-                    
-
+                    <img src={ Img_01 } alt="img 1" className='thumbnail' onClick={ HandleClickImg }></img>
+                    <img src={ Img_02 } alt="img 2" className='thumbnail' onClick={ HandleClickImg }></img>
+                    <img src={ Img_03 } alt="img 3" className='thumbnail' onClick={ HandleClickImg }></img>
+                    <img src={ Img_04 } alt="img 4" className='thumbnail' onClick={ HandleClickImg }></img>
+                    <img src={ Img_05 } alt="img 5" className='thumbnail' onClick={ HandleClickImg }></img>
+                    <img src={ Img_06 } alt="img 6" className='thumbnail' onClick={ HandleClickImg }></img>
+                    <img src={ Img_07 } alt="img 7" className='thumbnail' onClick={ HandleClickImg }></img>
+                    <img src={ Img_08 } alt="img 8" className='thumbnail' onClick={ HandleClickImg }></img>
+                    <img src={ Img_09 } alt="img 9" className='thumbnail' onClick={ HandleClickImg }></img>
+                    <img src={ Img_10 } alt="img 10" className='thumbnail' onClick={ HandleClickImg }></img>
+                    <img src={ Img_11 } alt="img 11" className='thumbnail' onClick={ HandleClickImg }></img>
+                    <img src={ Img_12 } alt="img 12" className='thumbnail' onClick={ HandleClickImg }></img>
+                    <img src={ Img_13 } alt="img 13" className='thumbnail' onClick={ HandleClickImg }></img>
+                    <img src={ Img_14 } alt="img 14" className='thumbnail' onClick={ HandleClickImg }></img>
+                    <img src={ Img_15 } alt="img 15" className='thumbnail' onClick={ HandleClickImg }></img>
+                    <img src={ Img_16 } alt="img 16" className='thumbnail' onClick={ HandleClickImg }></img>
                 </div>
                 <div id="dj-gallery">
                     <img src={ DJGallery } alt="dj gallery"></img>
                 </div>
             </section>
+            <div id="Modal" className="modal">
+                <span className="close" onClick={ handleModalCloseBtn }>&times;</span>
+            </div>
         </div>
     )
 }

@@ -1,25 +1,17 @@
 @import '../styles/settings.scss';
 
-section {
-    position: relative;
-
+section#gallery {
     #gallery-images, #dj-gallery {
         position: relative;
     }
 
     #gallery-images {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
         width: 100%;
         left: 50%;
-        -webkit-transform: translateX(-50%); 
-        -khtml-transform: translateX(-50%);
-        -moz-transform: translateX(-50%);
-        -ms-transform: translateX(-50%);
-        -o-transform: translateX(-50%);
         transform: translateX(-50%);
-        margin-top: 3rem;
+        text-align: center;
+        margin-bottom: 1rem;
+        margin-top: 2rem;
 
         img {
             width: 100%;
@@ -49,28 +41,110 @@ section {
         }
     }
 
-    #dj-gallery {  //this isn't correct, look at other sections - sort positioning to be consistent of these throughout! 
-        height: inherit;
-
+    #dj-gallery {
         img {
             position: relative;
             width: 160px;
-            top: 89%;
-            left: 50%;
+            left: calc(100% - 80px);
+            bottom: -20px;
             -webkit-transform: translateX(-50%); 
             -khtml-transform: translateX(-50%);
             -moz-transform: translateX(-50%);
             -ms-transform: translateX(-50%);
             -o-transform: translateX(-50%);
-            transform: translateX(-50%);
-            
+            transform: translateX(-50%); 
         }
     }
 }
 
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000;
+    padding-top: 100px; 
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%; 
+    overflow-y: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color (cross browser support for IE)*/
+    background-color: rgba(0,0,0,0.925);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+/* Zoom Animation */
+.modal-content {  
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: .7s;
+    animation-name: zoom;
+    animation-duration: .7s;
+}
+  
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)} 
+    to {-webkit-transform:scale(1)}
+}
+
+@-moz-keyframes zoom {
+    from {-webkit-transform:scale(0)} 
+    to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+}
+  
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #a1a1a1;
+    font-size: 55px;
+    font-weight: 500;
+    transition: 0.3s;
+
+    &:hover, &:focus {
+        color: #ffffff;
+        text-decoration: none;
+        cursor: pointer;
+    } 
+}
+
+@media screen and (max-width: 768px) {
+    section#gallery {
+        #dj-gallery {   
+            img {
+                width: 140px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .modal-content {
+        width: 100%; /* 100% width on smaller screens */
+    }
+}
+  
+
 @media screen and (max-width: 425px) {
-    
-    section {
+    section#gallery {
+        #gallery-images {
+            img {
+                margin: 1.5rem 0;
+            }
+        }
         #dj-gallery {
             img {
                 width: 150px;
@@ -80,13 +154,19 @@ section {
 }
 
 @media screen and (max-width: 350px) {
-    
-    section {
+    section#gallery {
         #gallery-images {
             img {
                 max-width: 250px;
                 height: 200px;
             }
         }
+    }
+}
+
+/* IE10+ specific styles*/
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    #dj-gallery {
+        display: none;
     }
 }
