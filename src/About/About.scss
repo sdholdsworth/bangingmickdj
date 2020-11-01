@@ -1,6 +1,6 @@
 @import '../styles/settings.scss';
 
-section {
+section#about {
     display: flex;
     flex-direction: row;
     flex-wrap: no-wrap;
@@ -9,7 +9,7 @@ section {
     align-content: center;
     position: relative;
 
-        figure#dj-about {
+        #dj-about {
             order: 1;
             position: relative; 
             height: inherit;      
@@ -17,9 +17,14 @@ section {
             
             img {
                 position: relative;
-                width: 200px;
+                width: 180px;
                 left: 50%;
                 top: 95%;
+                -webkit-transform: translate(-50%, -50%);
+                -khtml-transform: translate(-50%, -50%);
+                -moz-transform: translate(-50%, -50%);
+                -ms-transform: translate(-50%, -50%);
+                -o-transform: translate(-50%, -50%);
                 transform: translate(-50%, -50%);
             }
         }
@@ -28,7 +33,7 @@ section {
             order: 2;
             position: relative;
             height: inherit;
-            margin: 0 2rem;
+            margin: 2.5rem 2rem 0;
             
             p {
                 position: relative;
@@ -88,8 +93,7 @@ section {
 }
 
 @media screen and (min-width: 1201px) and (max-width: 1400px) {
-    
-    section {        
+    section#about {        
         article {
             p {
                 width: 70%;
@@ -99,8 +103,7 @@ section {
 }
 
 @media screen and (min-width: 1025px) and (max-width: 1200px) {
-    
-    section {        
+    section#about {        
         article {
             p {
                 width: 85%;
@@ -126,11 +129,10 @@ section {
 }
 
 @media screen and (max-width: 1024px) {
+    section#about {
+        flex-direction: column;
 
-    section {
-    flex-direction: column;
-
-        figure#dj-about {
+        #dj-about {
             order: 3;
             width: 100%;
             margin: 1rem 0 0;
@@ -145,12 +147,18 @@ section {
             order: 2;
             width: 100%;
             margin: 1rem 0;
+            padding-top: 3rem;
 
             p {
                 font-size: 1rem;
                 width: 75%;
                 margin-bottom: 2rem;
                 left: 50% !important;
+                -webkit-transform: translateX(-50%); 
+                -khtml-transform: translateX(-50%); 
+                -moz-transform: translateX(-50%); 
+                -ms-transform: translateX(-50%); 
+                -o-transform: translateX(-50%); 
                 transform: translateX(-50%); 
             }
         }
@@ -164,11 +172,21 @@ section {
 
             img {
                 left: 50%;
+                -webkit-transform: translateX(-50%); 
+                -khtml-transform: translateX(-50%); 
+                -moz-transform: translateX(-50%); 
+                -ms-transform: translateX(-50%); 
+                -o-transform: translateX(-50%); 
                 transform: translateX(-50%);
             }
 
             figcaption {
                 left: 50%;
+                -webkit-transform: translateX(-50%); 
+                -khtml-transform: translateX(-50%); 
+                -moz-transform: translateX(-50%); 
+                -ms-transform: translateX(-50%); 
+                -o-transform: translateX(-50%); 
                 transform: translateX(-50%);
             }
         }
@@ -177,16 +195,20 @@ section {
 }
 
 @media screen and (max-width: 768px) {
-
-    section {
-
-        figure#dj-about {
+    section#about {
+        #dj-about {
             margin: 0;
             left: 50%;
+            -webkit-transform: translateX(-50%); 
+            -khtml-transform: translateX(-50%); 
+            -moz-transform: translateX(-50%); 
+            -ms-transform: translateX(-50%); 
+            -o-transform: translateX(-50%); 
             transform: translateX(-50%);
 
             img {
                 top: 100px;
+                width: 160px;
             }
         }
 
@@ -199,13 +221,18 @@ section {
 }
 
 @media screen and (max-width: 425px) {
-
-    section {
-
+    section#about {
         article {
             p {
                 font-size: 0.85rem;
             }
         }
+    }
+}
+
+/* IE10+ specific styles*/
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    #dj-about {
+        display: none;
     }
 }

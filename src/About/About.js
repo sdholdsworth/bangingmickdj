@@ -7,9 +7,9 @@ const About = () => {
     return (
         <div>
             <section id="about" className="section-light">   
-                <figure id="dj-about">
+                <div id="dj-about">
                     <img src={ DJAbout } alt="about section dj icon"></img>
-                </figure>
+                </div>
                 <article>
                     <p>Hello all and a very warm welcome to my website! If you know anything about me already, you will know I love to tinker with things, have always been good with my hands and have a true passion for making great music!</p>
                     <p>I worked as a mechanic and plant operator/engineer for several years. I always had a passion for music, loved to go clubbing with my friends, meet new people and have a good dance. One day, I decided to buy myself a set of decks. I will never look back… this was one of the best purchases I had ever made in my life. I started practicing in my spare time and shortly after, this hobby of mine kept growing on me and I started spending a lot of my time on my decks and just couldn't get away from them. I started really loving mixing and creating music. When I became pretty good, I started to see myself as a disc jockey and had even thought about doing this for a living. I have been into music from as far back as I can remember and have been handy on the decks now for over two decades.</p>
