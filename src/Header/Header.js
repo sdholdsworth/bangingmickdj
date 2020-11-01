@@ -142,6 +142,7 @@ const Header = () => {
         //prevent the default hash ID being added to the URL
         e.preventDefault();
     }
+    
 
     //"Gallery" CLICK Navigation
     const handleClickGallery = (e) => {
