@@ -55,7 +55,7 @@ section {
     -ms-transform: translateX(-50%);
     -o-transform: translateX(-50%);
     transform: translateX(-50%);
-    padding: 2rem;
+    padding: 2rem 2rem 1.5rem;
 }
 
 .section-dark {
@@ -65,4 +65,3 @@ section {
 .section-light {
     background: rgba(245, 245, 245, 1);
 }
-

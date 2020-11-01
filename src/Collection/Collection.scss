@@ -4,7 +4,7 @@ section#collection {
     display: block;
     position: relative;
 
-    div, p, a {
+    div, a {
         position: relative;
     }
 
@@ -12,7 +12,7 @@ section#collection {
         width: 100%;
     }
     
-    p, a {
+    a, p {
         color: $black-lightest;
     }
 
@@ -22,11 +22,14 @@ section#collection {
 
     div:first-child {
         p {
-            padding-left: 2rem;
+            position: relative;
+            width: auto;
+            padding: 2rem 0 0 2rem;
         }
     }
 
     div:last-child {
+        display: block;
 
         img {
             position: relative;
@@ -37,9 +40,11 @@ section#collection {
         }
 
         p {
-            width: 50%;
+            position: absolute;
+            width: auto;
             left: 50%;
             transform: translateX(-50%);
+            padding-top: 2rem;
         }    
     }
 
@@ -65,8 +70,17 @@ section#collection {
     }
 }
 
+@media screen and (max-width: 1024px) {
+    section#collection {
+        div:first-child {
+            p {
+                width: 80%;
+            }
+        }
+    }
+}
+
 @media screen and (max-width: 768px) {
-    
     section#collection {
         div:first-child {
             p {
@@ -79,11 +93,13 @@ section#collection {
 
         div:last-child {
             img {
+                width: 140px;
                 left: 50%;
                 transform: translateX(-50%);
             }
 
             p {
+                position: relative;
                 width: 100%;	
             }
         }
@@ -91,13 +107,27 @@ section#collection {
 }
 
 @media screen and (max-width: 340px) {
-
     section#collection {
         #collection-samples {
             iframe {
                 width: 250px;
                 height: 250px;
             }
+        }
+    }
+}
+
+/* IE10+ specific styles*/
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    section#collection {
+        div:last-child {
+            img {
+                display: none;
+            }
+        }
+
+        #collection-samples {
+            margin-bottom: 2rem;
         }
     }
 }
