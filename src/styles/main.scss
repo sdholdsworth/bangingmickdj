@@ -12,7 +12,6 @@ html, body {
     overflow-x: hidden;
     //chrome fix for scroll adding to overall body width
     overflow-y: overlay;
-    //background: linear-gradient(-270deg, rgb(189, 2, 189), rgb(55, 55, 207), rgb(27, 216, 27)); - other color scheme
 
     //prevent user selection
     -webkit-user-select: none;
@@ -56,6 +55,13 @@ section {
     -o-transform: translateX(-50%);
     transform: translateX(-50%);
     padding: 2rem 2rem 1.5rem;
+}
+
+a:active, a:focus {
+    outline: 0;
+    border: none;
+    -moz-outline-style: none;
+    outline-style: none;
 }
 
 .section-dark {
