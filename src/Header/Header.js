@@ -277,7 +277,7 @@ const Header = () => {
                     </nav>
                 </div>
                 <div id="telephone">
-                    <span className="red">Tel:</span><a href="tel:+34609765797">+34 609 76 57 97</a>
+                    <span className="red">Tel:</span><a href="tel:+34667841767">+34 667 84 17 67</a>
                 </div>
                 <div id="burger-menu" className="btn-burger" onClick={() => {
                     const mobMenu = document.getElementById('burger-menu');

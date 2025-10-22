@@ -46,7 +46,7 @@ const Contact = () => {
         //alert user message send was successful
         .then(() => { alert(`\nThank you, your message has been submitted. \n\nDJ Banging Mick will be in contact with you shortly! 👍`);})
         //alert user if an error occurs
-        .catch((error) => { alert(`Oops, something went wrong 😔 \n\nThe following error occurred: \n\n${error.message} \n\nPlease try again later or alternatively feel free to contact me by phone on: +34 609 76 57 97 \n\nWe apologize for any inconvenience this may cause.`);})
+        .catch((error) => { alert(`Oops, something went wrong 😔 \n\nThe following error occurred: \n\n${error.message} \n\nPlease try again later or alternatively feel free to contact me by phone on: +34 667 84 17 67 \n\nWe apologize for any inconvenience this may cause.`);})
     }
   
     return (
@@ -124,7 +124,7 @@ const Contact = () => {
                         <span>Send Message</span>
                     </button>
                     <p>Alternatively, feel free to contact me by phone on:</p>
-                    <a className="red" href="tel:+34609765797">+34 609 76 57 97</a>
+                    <a className="red" href="tel:+34667841767">+34 667 84 17 67</a>
                 </form>
             </div>
             <div id="dj-contact">
